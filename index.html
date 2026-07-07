@@ -1,0 +1,2424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pol Athu Bath Kade | Authentic Sri Lankan Rice & Curry in Anuradhapura</title>
+    <meta name="description" content="Experience authentic Sri Lankan rice & curry buffet at Pol Athu Bath Kade in Anuradhapura. Taste traditional homemade curries, local breakfast, and organic Sri Lankan flavors.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Modern CSS Reset & Variables */
+        :root {
+            --bg-dark: #080808;
+            --bg-card: rgba(20, 20, 20, 0.7);
+            --bg-card-hover: rgba(30, 30, 30, 0.85);
+            --gold: #d4af37;
+            --gold-glow: rgba(212, 175, 55, 0.3);
+            --orange: #ff6b35;
+            --orange-glow: rgba(255, 107, 53, 0.3);
+            --brown: #8b5a2b;
+            --text-cream: #f5f1eb;
+            --text-muted: #b5afaf;
+            --glass-border: 1px solid rgba(255, 255, 255, 0.08);
+            --glass-border-hover: 1px solid rgba(212, 175, 55, 0.3);
+            --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-fast: all 0.3s ease;
+            --font-display: 'Playfair Display', serif;
+            --font-sans: 'Outfit', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-cream);
+            font-family: var(--font-sans);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0d0d0d;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--orange);
+        }
+
+        /* Typography Utilities */
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .gold-text {
+            color: var(--gold);
+            background: linear-gradient(135deg, var(--gold) 30%, var(--orange) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Background Noise Overlay for Texture */
+        .noise-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.02;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        /* Glowing Gradients in background */
+        .glow-sphere {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(150px);
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.15;
+        }
+        
+        .glow-1 {
+            width: 400px;
+            height: 400px;
+            background: var(--gold);
+            top: 10%;
+            right: -100px;
+        }
+
+        .glow-2 {
+            width: 500px;
+            height: 500px;
+            background: var(--orange);
+            bottom: 20%;
+            left: -150px;
+        }
+
+        /* Buttons & Interactive Elements */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
+            color: #000;
+            box-shadow: 0 4px 15px var(--gold-glow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px var(--orange-glow);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-cream);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.1);
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Navigation Bar */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            background: rgba(8, 8, 8, 0.85);
+            backdrop-filter: blur(20px);
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            text-decoration: none;
+            color: var(--text-cream);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            fill: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-cream);
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: var(--transition-fast);
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold), var(--orange));
+            transition: var(--transition-fast);
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links a.active {
+            color: var(--gold);
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            display: block;
+            position: absolute;
+            height: 2.5px;
+            width: 100%;
+            background: var(--text-cream);
+            border-radius: 9px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+
+        .hamburger span:nth-child(1) { top: 0px; }
+        .hamburger span:nth-child(2) { top: 8px; }
+        .hamburger span:nth-child(3) { top: 16px; }
+
+        .hamburger.active span:nth-child(1) {
+            top: 8px;
+            transform: rotate(135deg);
+            background: var(--gold);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+            left: -60px;
+        }
+        .hamburger.active span:nth-child(3) {
+            top: 8px;
+            transform: rotate(-135deg);
+            background: var(--gold);
+        }
+
+        /* Hero Section */
+        #home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 100px;
+            overflow: hidden;
+            background: linear-gradient(to bottom, rgba(8, 8, 8, 0.85) 0%, rgba(8, 8, 8, 0.7) 50%, rgba(8, 8, 8, 0.95) 100%), url('images/hero_banner.png') no-repeat center center;
+            background-size: cover;
+        }
+
+        .hero-grid {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .hero-content {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-tagline {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gold);
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .hero-tagline::before, .hero-tagline::after {
+            content: '';
+            width: 25px;
+            height: 1px;
+            background: var(--gold);
+            display: inline-block;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 5vw, 4.8rem);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero-desc {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            max-width: 720px;
+            font-weight: 300;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Cleaned Visual Styles */
+        .hero-visual {
+            display: none;
+        }
+
+        /* Hero Ember Particles */
+        .hero-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            bottom: -20px;
+            background: radial-gradient(circle, rgba(255, 107, 53, 0.8) 0%, rgba(212, 175, 55, 0.4) 70%, transparent 100%);
+            border-radius: 50%;
+            filter: blur(1.5px);
+            animation: riseUp infinite linear;
+        }
+
+        @keyframes riseUp {
+            0% {
+                transform: translateY(0) scale(1) rotate(0deg);
+                opacity: 0;
+            }
+            10% { opacity: 0.8; }
+            90% { opacity: 0.8; }
+            100% {
+                transform: translateY(-105vh) scale(0.3) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Floating Foreground Spices */
+        .hero-floating-element {
+            position: absolute;
+            pointer-events: none;
+            z-index: 3;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5)) blur(0.5px);
+            animation: gentleFloat infinite ease-in-out;
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        @keyframes gentleFloat {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-15px) rotate(8deg);
+            }
+        }
+
+        .float-leaf-1 {
+            width: 80px;
+            height: 80px;
+            top: 15%;
+            right: 8%;
+            animation-duration: 9s;
+        }
+
+        .float-cinnamon-1 {
+            width: 100px;
+            height: 100px;
+            bottom: 12%;
+            left: 6%;
+            animation-duration: 11s;
+            animation-delay: -2s;
+        }
+
+        .float-cardamom-1 {
+            width: 60px;
+            height: 60px;
+            top: 22%;
+            left: 10%;
+            animation-duration: 8s;
+            animation-delay: -4s;
+        }
+
+        /* Heading Shimmer Effect */
+        .gold-text {
+            background: linear-gradient(120deg, var(--gold) 0%, var(--orange) 30%, var(--gold) 60%, var(--orange) 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 4s linear infinite;
+        }
+
+        @keyframes shimmer {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Sections General */
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-tag {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--orange));
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .highlight-card {
+            background: var(--bg-card);
+            border: var(--glass-border);
+            padding: 25px;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            border-color: var(--gold);
+            background: var(--bg-card-hover);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.1);
+        }
+
+        .highlight-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .highlight-card h4 {
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            color: var(--text-cream);
+        }
+
+        .highlight-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+
+        .about-visual {
+            position: relative;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 3D clay pot CSS graphic */
+        .clay-pot-3d {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            transform-style: preserve-3d;
+            transform: rotateX(20deg) rotateY(-10deg);
+            animation: gentleRotate 8s ease-in-out infinite alternate;
+        }
+
+        .clay-pot-rim {
+            position: absolute;
+            top: 0;
+            left: 25px;
+            width: 200px;
+            height: 40px;
+            background: linear-gradient(90deg, #995533 0%, #663311 50%, #442200 100%);
+            border-radius: 50%;
+            transform: translateZ(50px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5), inset 0 5px 10px rgba(0,0,0,0.8);
+            border: 2px solid #552200;
+        }
+
+        .clay-pot-body {
+            position: absolute;
+            top: 25px;
+            left: 0;
+            width: 250px;
+            height: 180px;
+            background: radial-gradient(circle at 30% 30%, #bf663b 10%, #7d3d20 70%, #47210e 100%);
+            border-radius: 50%;
+            box-shadow: 0 25px 40px rgba(0,0,0,0.7), inset -10px -10px 30px rgba(0,0,0,0.9);
+        }
+
+        .clay-pot-stand {
+            position: absolute;
+            bottom: 10px;
+            left: 75px;
+            width: 100px;
+            height: 30px;
+            background: #2b1407;
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.8);
+        }
+
+        .steam-container {
+            position: absolute;
+            top: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .steam-bubble {
+            width: 8px;
+            height: 60px;
+            background: linear-gradient(to top, rgba(245, 241, 235, 0.2), transparent);
+            border-radius: 50%;
+            filter: blur(4px);
+            animation: riseSteam 3s infinite linear;
+        }
+
+        .steam-bubble:nth-child(2) {
+            animation-delay: 0.8s;
+            height: 80px;
+            animation-duration: 4s;
+        }
+
+        .steam-bubble:nth-child(3) {
+            animation-delay: 1.5s;
+            height: 50px;
+            animation-duration: 3.5s;
+        }
+
+        @keyframes riseSteam {
+            0% {
+                transform: translateY(40px) scaleX(1) translateX(0);
+                opacity: 0;
+            }
+            15% {
+                opacity: 0.6;
+            }
+            50% {
+                transform: translateY(0) scaleX(1.5) translateX(10px);
+            }
+            85% {
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(-60px) scaleX(2) translateX(-10px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes gentleRotate {
+            0% { transform: rotateX(15deg) rotateY(-10deg); }
+            100% { transform: rotateX(25deg) rotateY(10deg); }
+        }
+
+        /* Menu Section */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        /* 3D Rotating Menu Cards */
+        .menu-card-wrapper {
+            perspective: 1200px;
+            height: 480px;
+        }
+
+        .menu-card-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+        }
+
+        .menu-card-wrapper:hover .menu-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .menu-card-front, .menu-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 24px;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: var(--bg-card);
+            border: var(--glass-border);
+            backdrop-filter: blur(12px);
+        }
+
+        .menu-card-front {
+            z-index: 2;
+        }
+
+        .menu-card-back {
+            transform: rotateY(180deg);
+            background: radial-gradient(circle at center, #1b1510 0%, #0d0d0d 100%);
+            border-color: var(--gold-glow);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .menu-card-visual {
+            height: 180px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .menu-card-tag {
+            align-self: flex-start;
+            background: rgba(212, 175, 55, 0.12);
+            color: var(--gold);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .menu-card-title {
+            font-size: 1.8rem;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .menu-card-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-weight: 300;
+        }
+
+        .menu-card-action {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .menu-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        .card-flip-hint {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Images inside menu cards */
+        .svg-food-icon, .menu-card-img {
+            width: 130px;
+            height: 130px;
+            filter: drop-shadow(0 15px 15px rgba(0,0,0,0.6));
+            transition: var(--transition);
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(212,175,55,0.3);
+        }
+
+        .menu-card-wrapper:hover .svg-food-icon,
+        .menu-card-wrapper:hover .menu-card-img {
+            transform: scale(1.1) rotate(5deg);
+            border-color: var(--gold);
+            box-shadow: 0 0 25px rgba(212,175,55,0.3);
+        }
+
+        /* About section image */
+        .about-img {
+            width: 100%;
+            max-width: 420px;
+            height: auto;
+            border-radius: 24px;
+            border: 2px solid rgba(212,175,55,0.2);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+            transition: var(--transition);
+        }
+
+        .about-img:hover {
+            transform: scale(1.03);
+            border-color: var(--gold);
+            box-shadow: 0 30px 60px rgba(212,175,55,0.15);
+        }
+
+        /* Gallery img tag support */
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.1);
+        }
+
+        /* Specialties Showcase */
+        .specialties-header {
+            text-align: center;
+            margin: 60px 0 40px;
+        }
+
+        .special-items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .special-card {
+            background: var(--bg-card);
+            border: var(--glass-border);
+            border-radius: 16px;
+            padding: 25px;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .special-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--orange-glow);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.08);
+        }
+
+        .special-title-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .special-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .special-price {
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .special-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        /* Statistics Section */
+        #stats {
+            background: linear-gradient(180deg, #080808 0%, #120e0b 50%, #080808 100%);
+            position: relative;
+            padding: 80px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item {
+            position: relative;
+        }
+
+        .stat-number {
+            font-size: clamp(3rem, 5vw, 4rem);
+            font-weight: 800;
+            font-family: var(--font-display);
+            color: var(--gold);
+            line-height: 1.1;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .stat-title {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Gallery Section */
+        .gallery-filter {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 45px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-cream);
+            padding: 10px 24px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 500;
+            font-family: var(--font-sans);
+            transition: var(--transition-fast);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--gold);
+            color: #000;
+            border-color: var(--gold);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 280px;
+            cursor: pointer;
+            border: var(--glass-border);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--gold);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+        }
+
+        /* SVG Drawings of Food/Atmosphere as placeholders */
+        .gallery-svg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-svg {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 30px;
+            transition: var(--transition-fast);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-tag {
+            color: var(--gold);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+        }
+
+        .gallery-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        /* Lightbox CSS */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .lightbox-content {
+            max-width: 85%;
+            max-height: 80%;
+            position: relative;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .lightbox.active .lightbox-content {
+            transform: scale(1);
+        }
+
+        .lightbox-media {
+            width: 100%;
+            height: auto;
+            max-height: 70vh;
+            border-radius: 12px;
+            box-shadow: 0 0 50px rgba(212,175,55,0.25);
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: var(--text-cream);
+            font-size: 2rem;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+        }
+
+        .lightbox-close:hover {
+            color: var(--gold);
+        }
+
+        .lightbox-title {
+            color: var(--text-cream);
+            margin-top: 15px;
+            text-align: center;
+            font-size: 1.4rem;
+        }
+
+        /* Reviews Section (3D Testimonial Carousel) */
+        .reviews-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            height: 380px;
+            perspective: 1000px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .review-card {
+            position: absolute;
+            width: 100%;
+            max-width: 650px;
+            background: var(--bg-card);
+            border: var(--glass-border);
+            border-radius: 24px;
+            padding: 40px;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s, visibility 0.8s;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        /* 3D Stack Effect */
+        .review-card.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: translateZ(0) scale(1);
+            z-index: 10;
+        }
+
+        .review-card.next {
+            opacity: 0.4;
+            visibility: visible;
+            pointer-events: none;
+            transform: translateZ(-100px) translateX(80px) rotateY(-15deg) scale(0.95);
+            z-index: 5;
+        }
+
+        .review-card.prev {
+            opacity: 0.4;
+            visibility: visible;
+            pointer-events: none;
+            transform: translateZ(-100px) translateX(-80px) rotateY(15deg) scale(0.95);
+            z-index: 5;
+        }
+
+        .review-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #000;
+            font-weight: 700;
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .review-stars {
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .review-text {
+            font-size: 1.15rem;
+            font-style: italic;
+            margin-bottom: 25px;
+            color: var(--text-cream);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .review-author {
+            font-weight: 600;
+            color: var(--gold);
+            font-size: 1.05rem;
+        }
+
+        .review-role {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* Carousel Navigation Buttons */
+        .reviews-nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .rev-nav-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: var(--text-cream);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-fast);
+        }
+
+        .rev-nav-btn:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            background: rgba(212,175,55,0.05);
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: stretch;
+        }
+
+        .contact-info {
+            background: var(--bg-card);
+            border: var(--glass-border);
+            border-radius: 24px;
+            padding: 50px;
+            backdrop-filter: blur(15px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .contact-title {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(212,175,55,0.1);
+            border: 1px solid rgba(212,175,55,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--gold);
+            flex-shrink: 0;
+        }
+
+        .contact-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--text-cream);
+        }
+
+        .contact-text p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-weight: 300;
+        }
+
+        .contact-actions {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Modern SVG Styled Map Box instead of standard iframe for matching design style */
+        .contact-map-wrapper {
+            background: #111;
+            border: var(--glass-border);
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+            min-height: 400px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .map-interactive-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, #1b1b1b 10%, #090909 90%);
+        }
+
+        .map-glow-marker {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            animation: bounce 2s infinite ease-in-out;
+        }
+
+        .map-glow-pin {
+            width: 50px;
+            height: 50px;
+            fill: var(--orange);
+            filter: drop-shadow(0 0 15px var(--orange));
+        }
+
+        .map-overlay-card {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+            background: rgba(8, 8, 8, 0.9);
+            border: var(--glass-border-hover);
+            border-radius: 16px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            z-index: 3;
+            transition: var(--transition);
+        }
+
+        .contact-map-wrapper:hover .map-overlay-card {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212,175,55,0.15);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        /* Footer */
+        footer {
+            background: #040404;
+            padding: 80px 0 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            z-index: 10;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 60px;
+            margin-bottom: 50px;
+        }
+
+        .footer-brand h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            max-width: 400px;
+            font-weight: 300;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 80px;
+            justify-content: flex-end;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-col a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: var(--transition-fast);
+        }
+
+        .footer-col a:hover {
+            color: var(--gold);
+        }
+
+        .social-row {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-cream);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: var(--transition-fast);
+        }
+
+        .social-btn:hover {
+            background: var(--gold);
+            color: #000;
+            border-color: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
+            color: #000;
+            border: none;
+            cursor: pointer;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-fast);
+            box-shadow: 0 5px 15px rgba(255,107,53,0.3);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255,107,53,0.5);
+        }
+
+        /* Scroll Reveal Effect Class */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            .hero-grid, .about-grid, .contact-grid, .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .hero-visual {
+                height: 400px;
+            }
+
+            .about-visual {
+                height: 350px;
+                order: -1;
+            }
+
+            .footer-links {
+                justify-content: flex-start;
+                gap: 50px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 75%;
+                height: 100vh;
+                background: rgba(8, 8, 8, 0.95);
+                backdrop-filter: blur(25px);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                transition: var(--transition);
+                z-index: 1000;
+                border-left: 1px solid rgba(255, 255, 255, 0.05);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .highlight-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .reviews-container {
+                height: 440px;
+            }
+
+            .review-card {
+                padding: 30px 20px;
+                width: 92%;
+            }
+
+            /* Prevent 3D reviews horizontal overflow on small displays */
+            .review-card.next {
+                transform: translateZ(-100px) translateX(30px) rotateY(-10deg) scale(0.9);
+                opacity: 0.3;
+            }
+
+            .review-card.prev {
+                transform: translateZ(-100px) translateX(-30px) rotateY(10deg) scale(0.9);
+                opacity: 0.3;
+            }
+
+            /* Hide floating spice SVGs on mobile for better text visibility */
+            .hero-floating-element {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-actions {
+                flex-direction: column;
+                width: 100%;
+                gap: 12px;
+                padding: 0 15px;
+            }
+
+            .hero-actions .btn {
+                width: 100%;
+            }
+
+            .hero-title {
+                font-size: 2.8rem;
+            }
+        }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="noise-overlay"></div>
+
+    <!-- Glow Spheres for aesthetic depth -->
+    <div class="glow-sphere glow-1"></div>
+    <div class="glow-sphere glow-2"></div>
+
+    <!-- Navigation -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Rice Pot Silhouette with Steam logo -->
+                    <path d="M20 55 C 20 80, 80 80, 80 55 C 80 48, 70 45, 50 45 C 30 45, 20 48, 20 55 Z" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+                    <path d="M25 45 L 75 45" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+                    <path d="M40 35 Q 45 25, 40 15" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M50 35 Q 55 20, 50 15" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M60 35 Q 65 25, 60 15" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+                Pol Athu<span>Bath Kade</span>
+            </a>
+            
+            <button class="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <!-- Rising embers from wood stove hearth -->
+        <div class="hero-particles">
+            <span class="particle" style="left: 10%; width: 6px; height: 6px; animation-duration: 8s; animation-delay: 0s;"></span>
+            <span class="particle" style="left: 25%; width: 8px; height: 8px; animation-duration: 12s; animation-delay: 1.5s;"></span>
+            <span class="particle" style="left: 40%; width: 5px; height: 5px; animation-duration: 10s; animation-delay: 3s;"></span>
+            <span class="particle" style="left: 55%; width: 7px; height: 7px; animation-duration: 9s; animation-delay: 0.5s;"></span>
+            <span class="particle" style="left: 70%; width: 9px; height: 9px; animation-duration: 11s; animation-delay: 2s;"></span>
+            <span class="particle" style="left: 85%; width: 6px; height: 6px; animation-duration: 8s; animation-delay: 4s;"></span>
+            <span class="particle" style="left: 15%; width: 4px; height: 4px; animation-duration: 13s; animation-delay: 5s;"></span>
+            <span class="particle" style="left: 35%; width: 7px; height: 7px; animation-duration: 10s; animation-delay: 2.5s;"></span>
+            <span class="particle" style="left: 65%; width: 5px; height: 5px; animation-duration: 11s; animation-delay: 6s;"></span>
+            <span class="particle" style="left: 80%; width: 8px; height: 8px; animation-duration: 9s; animation-delay: 1s;"></span>
+        </div>
+
+        <!-- Floating Foreground Spice Elements for Depth of Field -->
+        <svg class="hero-floating-element float-leaf-1" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 10 C30 30, 20 60, 50 90 C80 60, 70 30, 50 10 Z" fill="#2e6b22" opacity="0.9"/>
+            <path d="M50 10 V90" stroke="#1d4d12" stroke-width="2"/>
+            <path d="M50 30 Q35 40 30 45" stroke="#1d4d12" stroke-width="1.5"/>
+            <path d="M50 45 Q35 55 25 60" stroke="#1d4d12" stroke-width="1.5"/>
+            <path d="M50 60 Q35 70 28 75" stroke="#1d4d12" stroke-width="1.5"/>
+            <path d="M50 30 Q65 40 70 45" stroke="#1d4d12" stroke-width="1.5"/>
+            <path d="M50 45 Q65 55 75 60" stroke="#1d4d12" stroke-width="1.5"/>
+            <path d="M50 60 Q65 70 72 75" stroke="#1d4d12" stroke-width="1.5"/>
+        </svg>
+
+        <svg class="hero-floating-element float-cinnamon-1" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="25" y="10" width="50" height="80" rx="10" fill="#5c381e"/>
+            <rect x="30" y="15" width="40" height="70" rx="8" fill="#422511"/>
+            <path d="M30 10 C45 25, 45 75, 30 90" stroke="#8b5a2b" stroke-width="3"/>
+            <path d="M70 10 C55 25, 55 75, 70 90" stroke="#8b5a2b" stroke-width="3"/>
+        </svg>
+
+        <svg class="hero-floating-element float-cardamom-1" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 15 C35 30, 30 70, 50 85 C70 70, 65 30, 50 15 Z" fill="#7a9e60"/>
+            <path d="M50 15 C45 35, 45 65, 50 85" stroke="#52703a" stroke-width="2"/>
+            <path d="M50 15 C55 35, 55 65, 50 85" stroke="#52703a" stroke-width="2"/>
+        </svg>
+
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-tagline">Anuradhapura, Sri Lanka</div>
+                <h1 class="hero-title">Pol Athu<br><span class="gold-text">Bath Kade</span></h1>
+                <p class="hero-desc">Discover traditional Sri Lankan flavors with fresh local ingredients, unlimited curry buffet, and a peaceful dining atmosphere in Anuradhapura.</p>
+                <div class="hero-actions">
+                    <a href="#menu" class="btn btn-primary">
+                        Explore Menu
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                    <a href="https://maps.app.goo.gl/wLPxnPsB3cJNf52q9" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        Get Directions
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Our History & Essence</span>
+                <h2 class="section-title">Traditional Taste Since 2014</h2>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <h3>Taste the True Culture of Sri Lanka</h3>
+                    <p>Pol Athu Bath Kade is a family-run restaurant located on the Anuradhapura - Thanthirimale Road. Known for authentic Sri Lankan rice and curry, the restaurant offers delicious buffet meals with a calm environment, friendly service, and affordable prices.</p>
+                    
+                    <div class="highlight-grid">
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🍚</div>
+                            <h4>Authentic Cuisine</h4>
+                            <p>Prepared using local organic rice varieties.</p>
+                        </div>
+                        
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🌴</div>
+                            <h4>Homemade Flavors</h4>
+                            <p>Secret family recipes passed through generations.</p>
+                        </div>
+                        
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🍛</div>
+                            <h4>Unlimited Curry Buffet</h4>
+                            <p>Enjoy as much spicy & savory curry as you desire.</p>
+                        </div>
+                        
+                        <div class="highlight-card">
+                            <div class="highlight-icon">⭐</div>
+                            <h4>Affordable Quality</h4>
+                            <p>Incredible taste at prices that warm your heart.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual reveal">
+                    <img src="images/hero_food.png" alt="Traditional Sri Lankan Rice and Curry Spread" class="about-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Taste Our Masterpieces</span>
+                <h2 class="section-title">The Culinary Experience</h2>
+            </div>
+            
+            <div class="menu-grid">
+                <!-- Rice & Curry Buffet Card -->
+                <div class="menu-card-wrapper reveal">
+                    <div class="menu-card-inner">
+                        <div class="menu-card-front">
+                            <div class="menu-card-tag">All-Day Buffet</div>
+                            <div class="menu-card-visual">
+                                <img src="images/rice_curry_buffet.png" class="menu-card-img" alt="Rice & Curry Buffet">
+                            </div>
+                            <div>
+                                <h3 class="menu-card-title">Rice & Curry Buffet</h3>
+                                <p class="menu-card-desc">A traditional Sri Lankan buffet featuring a variety of flavorful curries, rice, vegetables and local specialties.</p>
+                            </div>
+                            <div class="menu-card-action">
+                                <span class="menu-price">Rs 400 - 800</span>
+                                <span class="card-flip-hint">Hover to Flip <span>↻</span></span>
+                            </div>
+                        </div>
+                        <div class="menu-card-back">
+                            <h3 class="menu-card-title gold-text">Buffet Details</h3>
+                            <p style="margin: 20px 0; color: var(--text-muted); font-size: 0.95rem;">Includes red/white country rice, 5+ vegetable curries, optional lake fish curry, chicken, papadam, dry fish, and homemade sambols.</p>
+                            <a href="#contact" class="btn btn-primary">Book Table Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Breakfast Buffet Card -->
+                <div class="menu-card-wrapper reveal">
+                    <div class="menu-card-inner">
+                        <div class="menu-card-front">
+                            <div class="menu-card-tag">Morning Fuel</div>
+                            <div class="menu-card-visual">
+                                <img src="images/breakfast_buffet.png" class="menu-card-img" alt="Breakfast Buffet">
+                            </div>
+                            <div>
+                                <h3 class="menu-card-title">Breakfast Buffet</h3>
+                                <p class="menu-card-desc">Fresh Sri Lankan breakfast options prepared with authentic local recipes, hot rotis, and string hoppers.</p>
+                            </div>
+                            <div class="menu-card-action">
+                                <span class="menu-price">Rs 300 - 550</span>
+                                <span class="card-flip-hint">Hover to Flip <span>↻</span></span>
+                            </div>
+                        </div>
+                        <div class="menu-card-back">
+                            <h3 class="menu-card-title gold-text">Breakfast Selection</h3>
+                            <p style="margin: 20px 0; color: var(--text-muted); font-size: 0.95rem;">Fresh Pol Roti, String Hoppers (Indi Appa), Milk Rice (Kiribath), accompanied by spicy Lunu Miris, Seeni Sambol, and Dhal Curry.</p>
+                            <a href="#contact" class="btn btn-primary">Reserve Morning</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Traditional Curries Card -->
+                <div class="menu-card-wrapper reveal">
+                    <div class="menu-card-inner">
+                        <div class="menu-card-front">
+                            <div class="menu-card-tag">Claypot Cooked</div>
+                            <div class="menu-card-visual">
+                                <img src="images/traditional_curries.png" class="menu-card-img" alt="Traditional Curries">
+                            </div>
+                            <div>
+                                <h3 class="menu-card-title">Traditional Curries</h3>
+                                <p class="menu-card-desc">Richly spiced curries made with fresh ingredients and traditional clay pot slow-cooking methods.</p>
+                            </div>
+                            <div class="menu-card-action">
+                                <span class="menu-price">Rs 150 - 450</span>
+                                <span class="card-flip-hint">Hover to Flip <span>↻</span></span>
+                            </div>
+                        </div>
+                        <div class="menu-card-back">
+                            <h3 class="menu-card-title gold-text">A La Carte Curries</h3>
+                            <p style="margin: 20px 0; color: var(--text-muted); font-size: 0.95rem;">Waw Maalu (Fresh Lake Fish), Black Pork Curry, Jackfruit Curry (Polos), Cashew Curry, and Ambul Thiyal cooked over slow firewood flames.</p>
+                            <a href="#contact" class="btn btn-primary">Check Availability</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Special Dishes Section -->
+            <div class="specialties-header reveal">
+                <span class="section-tag" style="font-size: 0.75rem;">Highly Recommended</span>
+                <h3 style="font-size: 1.8rem;">Local Special Dishes</h3>
+            </div>
+
+            <div class="special-items-grid">
+                <div class="special-card reveal">
+                    <div class="special-title-row">
+                        <span class="special-name">Sri Lankan Rice & Curry</span>
+                        <span class="special-price">Rs 450</span>
+                    </div>
+                    <p class="special-desc">Authentic claypot rice accompanied by 5 traditional curries and papadams.</p>
+                </div>
+                
+                <div class="special-card reveal">
+                    <div class="special-title-row">
+                        <span class="special-name">Waw Maalu Curry</span>
+                        <span class="special-price">Rs 350</span>
+                    </div>
+                    <p class="special-desc">Freshly caught lake fish simmered in a dark, richly spiced gravy.</p>
+                </div>
+                
+                <div class="special-card reveal">
+                    <div class="special-title-row">
+                        <span class="special-name">Vegetable Curries</span>
+                        <span class="special-price">Rs 250</span>
+                    </div>
+                    <p class="special-desc">A selection of local organic farm-fresh veggies spiced to perfection.</p>
+                </div>
+                
+                <div class="special-card reveal">
+                    <div class="special-title-row">
+                        <span class="special-name">Local Breakfast Combo</span>
+                        <span class="special-price">Rs 350</span>
+                    </div>
+                    <p class="special-desc">String hoppers, hot roti, dhal curry, pol sambol, and local tea.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Statistics -->
+    <section id="stats">
+        <div class="container stats-grid">
+            <div class="stat-item reveal">
+                <span class="stat-number" data-target="10">0</span>
+                <span class="stat-title">Years Experience</span>
+            </div>
+            
+            <div class="stat-item reveal">
+                <span class="stat-number" data-target="100">0</span>
+                <span class="stat-title">100% Authentic Taste</span>
+            </div>
+            
+            <div class="stat-item reveal">
+                <span class="stat-number" data-target="500">0</span>
+                <span class="stat-title">Happy Customers Daily</span>
+            </div>
+            
+            <div class="stat-item reveal">
+                <span class="stat-number">Best</span>
+                <span class="stat-title">Affordable Price</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Visual Feast</span>
+                <h2 class="section-title">The Culinary Gallery</h2>
+            </div>
+            
+            <div class="gallery-filter reveal">
+                <button class="filter-btn active" data-filter="all">All Photos</button>
+                <button class="filter-btn" data-filter="food">Food</button>
+                <button class="filter-btn" data-filter="atmosphere">Atmosphere</button>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- Food Item 1 -->
+                <div class="gallery-item reveal" data-category="food" onclick="openLightbox('food-1')">
+                    <img src="images/traditional_curries.png" class="gallery-svg" id="food-1" alt="Traditional Waw Maalu Curry">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Food</span>
+                        <h4 class="gallery-title">Traditional Waw Maalu Curry</h4>
+                    </div>
+                </div>
+
+                <!-- Food Item 2 -->
+                <div class="gallery-item reveal" data-category="food" onclick="openLightbox('food-2')">
+                    <img src="images/rice_curry_buffet.png" class="gallery-svg" id="food-2" alt="Grand Rice & Curry Feast">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Food</span>
+                        <h4 class="gallery-title">Grand Rice & Curry Feast</h4>
+                    </div>
+                </div>
+
+                <!-- Atmosphere Item 1 -->
+                <div class="gallery-item reveal" data-category="atmosphere" onclick="openLightbox('atmos-1')">
+                    <img src="images/atmosphere.png" class="gallery-svg" id="atmos-1" alt="Quiet & Peaceful Dining">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Atmosphere</span>
+                        <h4 class="gallery-title">Quiet & Peaceful Dinings</h4>
+                    </div>
+                </div>
+
+                <!-- Food Item 3 -->
+                <div class="gallery-item reveal" data-category="food" onclick="openLightbox('food-3')">
+                    <img src="images/breakfast_buffet.png" class="gallery-svg" id="food-3" alt="Fresh String Hoppers & Sambol">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Food</span>
+                        <h4 class="gallery-title">Fresh String Hoppers & Sambol</h4>
+                    </div>
+                </div>
+
+                <!-- Atmosphere Item 2 -->
+                <div class="gallery-item reveal" data-category="atmosphere" onclick="openLightbox('atmos-2')">
+                    <img src="images/hearth_kitchen.png" class="gallery-svg" id="atmos-2" alt="Traditional Firewood Kitchen">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Atmosphere</span>
+                        <h4 class="gallery-title">Traditional Firewood Kitchen</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal" data-category="food" onclick="openLightbox('food-4')">
+                    <img src="images/kiribath.png" class="gallery-img" id="food-4" alt="Traditional Milk Rice (Kiribath)">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Food</span>
+                        <h4 class="gallery-title">Traditional Milk Rice (Kiribath)</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Overlay -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            <div id="lightbox-media-container"></div>
+            <h4 class="lightbox-title" id="lightbox-title">Image Details</h4>
+        </div>
+    </div>
+
+    <!-- Reviews Section -->
+    <section id="reviews">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Word on the Street</span>
+                <h2 class="section-title">Loved by Food Explorers</h2>
+            </div>
+            
+            <div class="reviews-container reveal">
+                <!-- Review 1 -->
+                <div class="review-card active" data-index="0">
+                    <div class="review-avatar">SG</div>
+                    <div class="review-stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="review-text">"Best food place around Anuradhapura. Good buffet and amazing taste."</p>
+                    <h4 class="review-author">Sri Lanka Local Guide</h4>
+                    <div class="review-role">Local Guide Contributor</div>
+                </div>
+                
+                <!-- Review 2 -->
+                <div class="review-card" data-index="1">
+                    <div class="review-avatar">CF</div>
+                    <div class="review-stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="review-text">"Located on the Anuradhapura - Thanthirimale Road, this restaurant offers a delicious breakfast and lunch buffet with a wide variety of flavorful local curries."</p>
+                    <h4 class="review-author">Chirath Fonseka</h4>
+                    <div class="review-role">Verified Local Customer</div>
+                </div>
+                
+                <!-- Review 3 -->
+                <div class="review-card" data-index="2">
+                    <div class="review-avatar">HD</div>
+                    <div class="review-stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="review-text">"Best place to have rice and curry in the whole of Anuradhapura."</p>
+                    <h4 class="review-author">Hesh Dian</h4>
+                    <div class="review-role">Authentic Foodie</div>
+                </div>
+                
+                <!-- Review 4 -->
+                <div class="review-card" data-index="3">
+                    <div class="review-avatar">SD</div>
+                    <div class="review-stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="review-text">"If you want a real taste of Sri Lanka, visit Pol Athu Bath Kade. Quiet environment and amazing authentic food."</p>
+                    <h4 class="review-author">Sethlath Dewapriya</h4>
+                    <div class="review-role">Travel & Food Enthusiast</div>
+                </div>
+                
+                <!-- Review 5 -->
+                <div class="review-card" data-index="4">
+                    <div class="review-avatar">JL</div>
+                    <div class="review-stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="review-text">"Nice Rice and curry buffet, run by a lovely family. Very affordable and authentic."</p>
+                    <h4 class="review-author">Julie Leclercq</h4>
+                    <div class="review-role">International Traveler</div>
+                </div>
+            </div>
+            
+            <div class="reviews-nav reveal">
+                <button class="rev-nav-btn" id="prev-rev-btn" aria-label="Previous Review">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                </button>
+                <button class="rev-nav-btn" id="next-rev-btn" aria-label="Next Review">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Locate Us</span>
+                <h2 class="section-title">Visit Pol Athu Bath Kade</h2>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <div>
+                        <h3 class="contact-title gold-text">Pol Athu Bath Kade</h3>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">📍</div>
+                                <div class="contact-text">
+                                    <h4>Address</h4>
+                                    <p>9978+586, Thanthirimale Road, Anuradhapura, Sri Lanka</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">📞</div>
+                                <div class="contact-text">
+                                    <h4>Phone</h4>
+                                    <p>076 281 0477</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">🕒</div>
+                                <div class="contact-text">
+                                    <h4>Opening Hours</h4>
+                                    <p>Open Daily (Breakfast & Lunch)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-actions">
+                        <a href="tel:0762810477" class="btn btn-primary">
+                            Call Now
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </a>
+                        <a href="https://maps.app.goo.gl/wLPxnPsB3cJNf52q9" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            Open Google Maps
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" y1="3" x2="9" y2="18"></line><line x1="15" y1="6" x2="15" y2="21"></line></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Modern Styled interactive Map Box -->
+                <div class="contact-map-wrapper reveal" onclick="window.open('https://maps.app.goo.gl/wLPxnPsB3cJNf52q9', '_blank')">
+                    <div class="map-interactive-bg"></div>
+                    <div class="map-glow-marker">
+                        <svg class="map-glow-pin" viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                        <h4 style="margin-top: 15px; font-weight: 500;">Tap to Navigate</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Thanthirimale Rd, Anuradhapura</p>
+                    </div>
+                    
+                    <div class="map-overlay-card">
+                        <h4 style="font-size: 1rem; margin-bottom: 5px; color: var(--gold);">Location Highlights</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Beautiful countryside environment. Perfect lunch stop for travelers heading towards the Thanthirimale temple.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3>Pol Athu<span>Bath Kade</span></h3>
+                <p>An authentic Sri Lankan Rice & Curry experience showcasing traditional homemade flavors, slow clay pot cooking, and a peaceful garden vibe.</p>
+                <div class="social-row">
+                    <a href="#" class="social-btn" aria-label="Facebook">FB</a>
+                    <a href="#" class="social-btn" aria-label="Instagram">IG</a>
+                    <a href="#" class="social-btn" aria-label="Tripadvisor">TA</a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Discover</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#menu">Our Menu</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Info</h4>
+                    <ul>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Pol Athu Bath Kade. All Rights Reserved.</p>
+            <p>Designed with ❤️ for Sri Lankan Culinary Tradition</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">▲</button>
+
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Header Background Solid on Scroll
+        const header = document.getElementById('header');
+        const backToTop = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+                backToTop.classList.add('active');
+            } else {
+                header.classList.remove('scrolled');
+                backToTop.classList.remove('active');
+            }
+            trackScrollSections();
+        });
+
+        // Scroll to Top action
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Active Navigation Link on Scroll
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-links a');
+
+        function trackScrollSections() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').slice(1) === current) {
+                    item.classList.add('active');
+                }
+            });
+        }
+
+        // 3D Parallax Mouse movement on Hero Showcase
+        const scene = document.getElementById('hero-scene');
+        const container = document.querySelector('.plate-container');
+
+        document.addEventListener('mousemove', (e) => {
+            if (!scene || !container) return;
+            const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+            const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+            container.style.transform = `rotateY(${xAxis}deg) rotateX(${20 + yAxis}deg)`;
+        });
+
+        // Reset plate position when mouse leaves window
+        document.addEventListener('mouseleave', () => {
+            if (container) {
+                container.style.transform = `rotateY(0deg) rotateX(20deg)`;
+            }
+        });
+
+        // Counter Animation for Stats Section
+        const counterNumbers = document.querySelectorAll('.stat-number');
+        let counterStarted = false;
+
+        function runCounters() {
+            counterNumbers.forEach(counter => {
+                const targetStr = counter.getAttribute('data-target');
+                if (!targetStr) return; // Skip if it's text like "Best"
+                
+                const target = +targetStr;
+                const updateCount = () => {
+                    const count = +counter.innerText.replace('+', '').replace('%', '');
+                    const inc = target / 80; // Speed factor
+
+                    if (count < target) {
+                        const nextVal = Math.ceil(count + inc);
+                        if (targetStr === '100') {
+                            counter.innerText = (nextVal >= target ? target : nextVal) + '%';
+                        } else if (targetStr === '500') {
+                            counter.innerText = (nextVal >= target ? target : nextVal) + '+';
+                        } else {
+                            counter.innerText = (nextVal >= target ? target : nextVal);
+                        }
+                        setTimeout(updateCount, 20);
+                    } else {
+                        if (targetStr === '100') counter.innerText = target + '%';
+                        else if (targetStr === '500') counter.innerText = target + '+';
+                        else counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        }
+
+        // Scroll Reveal Animations
+        const reveals = document.querySelectorAll('.reveal');
+
+        const revealOnScroll = () => {
+            reveals.forEach(reveal => {
+                const windowHeight = window.innerHeight;
+                const revealTop = reveal.getBoundingClientRect().top;
+                const revealPoint = 150;
+
+                if (revealTop < windowHeight - revealPoint) {
+                    reveal.classList.add('active');
+                    
+                    // Trigger counters when stats section is revealed
+                    if (reveal.closest('#stats') && !counterStarted) {
+                        counterStarted = true;
+                        runCounters();
+                    }
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        // Trigger once initially
+        revealOnScroll();
+
+        // Gallery Filter System
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Active button class
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'scale(1)'; }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => { item.style.display = 'none'; }, 300);
+                    }
+                });
+            });
+        });
+
+        // Gallery Lightbox System
+        const lightbox = document.getElementById('lightbox');
+        const lightboxMediaContainer = document.getElementById('lightbox-media-container');
+        const lightboxTitle = document.getElementById('lightbox-title');
+
+        window.openLightbox = function(mediaId) {
+            const originalMedia = document.getElementById(mediaId);
+            if (!originalMedia) return;
+
+            // Clone Media for Lightbox
+            const clonedMedia = originalMedia.cloneNode(true);
+            clonedMedia.removeAttribute('id');
+            clonedMedia.className = 'lightbox-media';
+            
+            // Get caption
+            const parentItem = originalMedia.closest('.gallery-item');
+            const titleText = parentItem.querySelector('.gallery-title').innerText;
+
+            lightboxMediaContainer.innerHTML = '';
+            lightboxMediaContainer.appendChild(clonedMedia);
+            lightboxTitle.innerText = titleText;
+
+            lightbox.style.display = 'flex';
+            setTimeout(() => {
+                lightbox.classList.add('active');
+            }, 50);
+        };
+
+        window.closeLightbox = function() {
+            lightbox.classList.remove('active');
+            setTimeout(() => {
+                lightbox.style.display = 'none';
+            }, 300);
+        };
+
+        // Reviews Carousel / Slider (3D effect)
+        const reviewCards = document.querySelectorAll('.review-card');
+        const prevBtn = document.getElementById('prev-rev-btn');
+        const nextBtn = document.getElementById('next-rev-btn');
+        let currentReviewIndex = 0;
+
+        function updateReviewsDisplay() {
+            reviewCards.forEach((card, idx) => {
+                card.classList.remove('active', 'next', 'prev');
+                
+                if (idx === currentReviewIndex) {
+                    card.classList.add('active');
+                } else if (idx === (currentReviewIndex + 1) % reviewCards.length) {
+                    card.classList.add('next');
+                } else if (idx === (currentReviewIndex - 1 + reviewCards.length) % reviewCards.length) {
+                    card.classList.add('prev');
+                }
+            });
+        }
+
+        function nextReview() {
+            currentReviewIndex = (currentReviewIndex + 1) % reviewCards.length;
+            updateReviewsDisplay();
+        }
+
+        function prevReview() {
+            currentReviewIndex = (currentReviewIndex - 1 + reviewCards.length) % reviewCards.length;
+            updateReviewsDisplay();
+        }
+
+        nextBtn.addEventListener('click', nextReview);
+        prevBtn.addEventListener('click', prevReview);
+
+        // Auto rotate reviews every 6 seconds
+        let reviewsAutoRotate = setInterval(nextReview, 6000);
+
+        // Reset auto rotate when buttons are clicked
+        [prevBtn, nextBtn].forEach(btn => {
+            btn.addEventListener('mouseenter', () => clearInterval(reviewsAutoRotate));
+            btn.addEventListener('mouseleave', () => {
+                clearInterval(reviewsAutoRotate);
+                reviewsAutoRotate = setInterval(nextReview, 6000);
+            });
+        });
+        
+        // Initial setup for reviews layout
+        updateReviewsDisplay();
+    </script>
+</body>
+</html>
