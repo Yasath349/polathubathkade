@@ -216,6 +216,9 @@
             align-items: center;
             gap: 10px;
             font-weight: 700;
+            white-space: nowrap;
+            flex-shrink: 1;
+            min-width: 0;
         }
 
         .logo span {
@@ -1603,6 +1606,17 @@
                 display: block;
             }
 
+            /* Logo - shrink so it doesn't collide with hamburger */
+            .logo {
+                font-size: 1.3rem;
+                gap: 6px;
+            }
+
+            .logo-icon {
+                width: 26px;
+                height: 26px;
+            }
+
             /* Hero Mobile */
             #home {
                 min-height: 90vh;
@@ -1839,6 +1853,16 @@
 
         /* === SMALL MOBILE (max-width: 480px) === */
         @media (max-width: 480px) {
+            .logo {
+                font-size: 1.05rem;
+                gap: 5px;
+            }
+
+            .logo-icon {
+                width: 22px;
+                height: 22px;
+            }
+
             .hero-title {
                 font-size: 2.2rem;
             }
